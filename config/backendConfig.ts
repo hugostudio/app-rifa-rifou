@@ -2,7 +2,7 @@ import ThirdPartyEmailPasswordNode from 'supertokens-node/recipe/thirdpartyemail
 //import EmailPasswordNode from "supertokens-node/recipe/emailpassword";
 import EmailVerificationNode from 'supertokens-node/recipe/emailverification'
 import SessionNode from "supertokens-node/recipe/session";
-import Dashboard from "supertokens-node/recipe/dashboard";
+//import Dashboard from "supertokens-node/recipe/dashboard";
 import { appInfo } from "./appInfo";
 import { AuthConfig } from "../interfaces";
 
@@ -19,9 +19,7 @@ export let backendConfig = (): AuthConfig => {
         // use from SuperTokens. See the full list here: https://supertokens.com/docs/guides
         recipeList: [
             //EmailPasswordNode.init(),
-            EmailVerificationNode.init({
-                mode: 'REQUIRED',
-              }),
+            EmailVerificationNode.init({ mode: 'REQUIRED' }),
             ThirdPartyEmailPasswordNode.init({
                 providers: [
                   // We have provided you with development keys which you can use for testing.
@@ -45,9 +43,9 @@ export let backendConfig = (): AuthConfig => {
                 ],
               }),
             SessionNode.init(),
-            Dashboard.init({
-                apiKey: "supertokens_is_awesome",
-            }),
+            // Dashboard.init({
+            //     apiKey: "supertokens_is_awesome",
+            // }),
         ],
         isInServerlessEnv: true,
     };
