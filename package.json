@@ -10,7 +10,7 @@
         "nextjs-cors": "^2.1.2",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "supertokens-auth-react": "latest",
+        "supertokens-auth-react": "^0.30.0",
         "supertokens-node": "^8.0.4"
     },
     "devDependencies": {

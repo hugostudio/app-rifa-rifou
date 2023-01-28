@@ -1,6 +1,6 @@
 import ThirdPartyEmailPasswordNode from 'supertokens-node/recipe/thirdpartyemailpassword'
-//import EmailPasswordNode from "supertokens-node/recipe/emailpassword";
-import EmailVerificationNode from 'supertokens-node/recipe/emailverification'
+import EmailPasswordNode from "supertokens-node/recipe/emailpassword";
+//import EmailVerificationNode from 'supertokens-node/recipe/emailverification'
 import SessionNode from "supertokens-node/recipe/session";
 //import Dashboard from "supertokens-node/recipe/dashboard";
 import { appInfo } from "./appInfo";
@@ -18,8 +18,8 @@ export let backendConfig = (): AuthConfig => {
         // recipeList contains all the modules that you want to
         // use from SuperTokens. See the full list here: https://supertokens.com/docs/guides
         recipeList: [
-            //EmailPasswordNode.init(),
-            EmailVerificationNode.init({ mode: 'REQUIRED' }),
+            EmailPasswordNode.init(),
+            //EmailVerificationNode.init({ mode: 'REQUIRED' }),
             ThirdPartyEmailPasswordNode.init({
                 providers: [
                   // We have provided you with development keys which you can use for testing.

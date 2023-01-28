@@ -1,6 +1,6 @@
 import ThirdPartyEmailPasswordReact from 'supertokens-auth-react/recipe/thirdpartyemailpassword'
-import EmailVerificationReact from 'supertokens-auth-react/recipe/emailverification'
-//import EmailPasswordReact from "supertokens-auth-react/recipe/emailpassword";
+//import EmailVerificationReact from 'supertokens-auth-react/recipe/emailverification'
+import EmailPasswordReact from "supertokens-auth-react/recipe/emailpassword";
 import SessionReact from "supertokens-auth-react/recipe/session";
 import { appInfo } from "./appInfo";
 import Router from "next/router";
@@ -11,10 +11,10 @@ export let frontendConfig = () => {
         // recipeList contains all the modules that you want to
         // use from SuperTokens. See the full list here: https://supertokens.com/docs/guides
         recipeList: [
-            //EmailPasswordReact.init(), 
-            EmailVerificationReact.init({
-                mode: 'REQUIRED',
-              }),
+            EmailPasswordReact.init(), 
+            // EmailVerificationReact.init({
+            //     mode: 'REQUIRED',
+            //   }),
             ThirdPartyEmailPasswordReact.init({
                 signInAndUpFeature: {
                   providers: [

@@ -6,9 +6,9 @@ import { backendConfig } from "../../../config/backendConfig";
 
 supertokens.init(backendConfig());
 
-export default async function superTokens(req, res) {
+export default async function superTokens(req: any, res: any) {
     await superTokensNextWrapper(
-        async (next) => {
+        async (next: any) => {
             res.setHeader("Cache-Control", "no-cache, no-store, max-age=0, must-revalidate");
             await middleware()(req, res, next);
         },
