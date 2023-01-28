@@ -7,15 +7,14 @@
     },
     "dependencies": {
         "next": "latest",
-        "nextjs-cors": "^2.1.2",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "supertokens-auth-react": "^0.30.0",
-        "supertokens-node": "^8.0.4"
+        "supertokens-auth-react": "latest",
+        "supertokens-node": "latest"
     },
     "devDependencies": {
-        "@types/node": "18.7.13",
         "@types/react": "18.0.17",
+        "@types/node": "18.7.13",
         "typescript": "^4.8.2"
     }
 }
